@@ -2133,3 +2133,112 @@ html body#app :is(
 
 
  
+/* RELAX SMART — Stats Section Mobile Fix
+   Section ID: 932031919
+   الهدف: في الموبايل يكون كل 2 كروت جنب بعض
+   آمن لأنه موجه لهذا القسم فقط
+*/
+
+section[component-id="932031919"] {
+  position: relative;
+}
+
+/* تحسين عام للقسم */
+section[component-id="932031919"] [component-name="stats-section"] {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* موبايل فقط */
+@media (max-width: 767px) {
+
+  /* مسافات القسم */
+  section[component-id="932031919"] {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  /* العنوان والوصف */
+  section[component-id="932031919"] h2,
+  section[component-id="932031919"] .section-title,
+  section[component-id="932031919"] .title {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    margin-bottom: 8px !important;
+  }
+
+  section[component-id="932031919"] p,
+  section[component-id="932031919"] .section-subtitle,
+  section[component-id="932031919"] .subtitle {
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+    text-align: center !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* الشبكة: 2 جنب بعض */
+  section[component-id="932031919"] .stats-grid,
+  section[component-id="932031919"] .stats-list,
+  section[component-id="932031919"] .stats-items,
+  section[component-id="932031919"] .items-grid,
+  section[component-id="932031919"] .grid,
+  section[component-id="932031919"] .row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+  }
+
+  /* الكروت */
+  section[component-id="932031919"] .stat-card,
+  section[component-id="932031919"] .stats-card,
+  section[component-id="932031919"] .item,
+  section[component-id="932031919"] .card,
+  section[component-id="932031919"] .single-stat {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 14px 10px !important;
+    border-radius: 14px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  /* الأيقونات */
+  section[component-id="932031919"] .stat-card i,
+  section[component-id="932031919"] .stats-card i,
+  section[component-id="932031919"] .item i,
+  section[component-id="932031919"] .card i,
+  section[component-id="932031919"] .single-stat i,
+  section[component-id="932031919"] .icon {
+    font-size: 24px !important;
+    margin-bottom: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* الرقم */
+  section[component-id="932031919"] .value,
+  section[component-id="932031919"] .stat-value,
+  section[component-id="932031919"] .number,
+  section[component-id="932031919"] strong {
+    display: block !important;
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
+    word-break: break-word !important;
+  }
+
+  /* النص */
+  section[component-id="932031919"] .label,
+  section[component-id="932031919"] .stat-label,
+  section[component-id="932031919"] small,
+  section[component-id="932031919"] span {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+  }
+}
