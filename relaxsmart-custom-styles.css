@@ -2126,3 +2126,38 @@ html body#app :is(
   display: none !important;
 }
 }
+
+
+
+
+/* RELAX SMART — Cart Title Layout Fix */
+
+@media (min-width: 768px) {
+
+  body .cart-item,
+  body .cart-product,
+  body .s-cart-item {
+    flex-wrap: wrap !important;
+  }
+
+  body :is(
+    .cart-item,
+    .cart-product,
+    .s-cart-item
+  ) :is(
+    .cart-item__name,
+    .cart-product__title,
+    .product-name,
+    .product-title,
+    .item-title
+  ) {
+    display: block !important;
+    flex: 1 1 190px !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+    line-height: 1.6 !important;
+  }
+}
